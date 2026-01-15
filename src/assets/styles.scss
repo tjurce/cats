@@ -1,0 +1,83 @@
+/* Reset i osnovni layout */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Light theme colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --bg-tertiary: #fafafa;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-tertiary: #999999;
+    --border-color: #e0e0e0;
+    --border-light: #f0f0f0;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --card-bg: #ffffff;
+    --hover-bg: #f5f5f5;
+    --hover-bg-alt: #f8f9fa;
+
+    /* Blue theme colors */
+    --blue-primary: #2196f3;
+    --blue-dark: #1976d2;
+    --blue-darker: #1565c0;
+    --blue-hover: #0b7dda;
+    --blue-light: #e3f2fd;
+    --blue-lighter: #bbdefb;
+}
+
+.dark-theme {
+    /* Dark theme colors */
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #242424;
+    --bg-tertiary: #2a2a2a;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-tertiary: #808080;
+    --border-color: #3a3a3a;
+    --border-light: #2f2f2f;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --card-bg: #242424;
+    --hover-bg: #2a2a2a;
+    --hover-bg-alt: #2f2f2f;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CONTENT GRID */
+.content-wrapper {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+
+    @media (max-width: 1024px) {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 8px;
+    }
+}

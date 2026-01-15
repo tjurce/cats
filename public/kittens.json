@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "name": "Micko",
+        "color": "siva",
+        "months": 4
+    },
+    {
+        "id": 2,
+        "name": "Luna",
+        "color": "siva",
+        "months": 14
+    },
+    {
+        "id": 3,
+        "name": "Riki",
+        "color": "siva",
+        "months": 8
+    },
+    {
+        "id": 4,
+        "name": "Poncho",
+        "color": "smeđa",
+        "months": 5
+    },
+    {
+        "id": 5,
+        "name": "Maxy",
+        "color": "narančasta",
+        "months": 8
+    },
+    {
+        "id": 6,
+        "name": "Mina",
+        "color": "siva",
+        "months": 2
+    },
+    {
+        "id": 7,
+        "name": "Boris",
+        "color": "siva",
+        "months": 3
+    },
+    {
+        "id": 8,
+        "name": "Dora",
+        "color": "narančasta",
+        "months": 7
+    },
+    {
+        "id": 9,
+        "name": "Jasper",
+        "color": "narančasta",
+        "months": 1
+    },
+    {
+        "id": 10,
+        "name": "Zara",
+        "color": "bijela",
+        "months": 5
+    },
+    {
+        "id": 11,
+        "name": "Oscar",
+        "color": "bijela",
+        "months": 3
+    },
+    {
+        "id": 12,
+        "name": "Lara",
+        "color": "narančasta",
+        "months": 6
+    },
+    {
+        "id": 13,
+        "name": "Fluffy",
+        "color": "crna",
+        "months": 9
+    },
+    {
+        "id": 14,
+        "name": "Leo",
+        "color": "crna",
+        "months": 14
+    },
+    {
+        "id": 15,
+        "name": "Simba",
+        "color": "narančasta",
+        "months": 4
+    },
+    {
+        "id": 16,
+        "name": "Chester",
+        "color": "narančasta",
+        "months": 3
+    },
+    {
+        "id": 17,
+        "name": "Pepper",
+        "color": "siva",
+        "months": 5
+    },
+    {
+        "id": 18,
+        "name": "Tom",
+        "color": "siva",
+        "months": 2
+    },
+    {
+        "id": 19,
+        "name": "Nina",
+        "color": "siva",
+        "months": 12
+    },
+    {
+        "id": 20,
+        "name": "Oliver",
+        "color": "siva",
+        "months": 7
+    },
+    {
+        "id": 21,
+        "name": "Milo",
+        "color": "crna",
+        "months": 4
+    },
+    {
+        "id": 22,
+        "name": "Tina",
+        "color": "siva",
+        "months": 6
+    },
+    {
+        "id": 23,
+        "name": "Zorro",
+        "color": "narančasta",
+        "months": 4
+    },
+    {
+        "id": 24,
+        "name": "Bella",
+        "color": "bijela",
+        "months": 5
+    },
+    {
+        "id": 25,
+        "name": "Max",
+        "color": "siva",
+        "months": 6
+    },
+    {
+        "id": 26,
+        "name": "Cleo",
+        "color": "narančasta",
+        "months": 9
+    },
+    {
+        "id": 27,
+        "name": "Rocky",
+        "color": "siva",
+        "months": 10
+    },
+    {
+        "id": 28,
+        "name": "Maggie",
+        "color": "siva",
+        "months": 1
+    },
+    {
+        "id": 29,
+        "name": "Sunny",
+        "color": "narančasta",
+        "months": 3
+    },
+    {
+        "id": 30,
+        "name": "Nico",
+        "color": "siva",
+        "months": 3
+    }
+]
