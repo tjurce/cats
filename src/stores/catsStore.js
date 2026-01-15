@@ -3,33 +3,30 @@ import { defineStore } from "pinia";
 export const useCatsStore = defineStore("catsStore", {
   state: () => ({
     allKittens: [],
-    visibleCount: 20, // Inicijalno 20 [cite: 14]
+    visibleCount: 20,
     searchQuery: "",
     filters: {
       under6Months: false,
       under12Months: false,
       isBlack: false,
     },
-    sortBy: "age", // 'age' ili 'name'
-    sortDir: "asc", // 'asc' ili 'desc'
-    adoptedIds: [], // Za skrivanje udomljenih [cite: 31]
+    sortBy: "age",
+    sortDir: "asc",
+    adoptedIds: [],
   }),
 
   getters: {
-    // 1. Prvo filtriramo i sortiramo sve dostupne mačiće
     processedKittens(state) {
       let result = state.allKittens.filter(
         (k) => !state.adoptedIds.includes(k.id)
       );
 
-      // Filter: Pretraga [cite: 22]
       if (state.searchQuery) {
         result = result.filter((k) =>
           k.name.toLowerCase().includes(state.searchQuery.toLowerCase())
         );
       }
 
-      // Filter: Checkboxi [cite: 20, 23]
       if (state.filters.under6Months)
         result = result.filter((k) => k.months < 6);
       if (state.filters.under12Months)
@@ -37,7 +34,6 @@ export const useCatsStore = defineStore("catsStore", {
       if (state.filters.isBlack)
         result = result.filter((k) => k.color.toLowerCase() === "crna");
 
-      // Sortiranje [cite: 15]
       result.sort((a, b) => {
         let valA = state.sortBy === "age" ? a.months : a.name.toLowerCase();
         let valB = state.sortBy === "age" ? b.months : b.name.toLowerCase();
@@ -50,14 +46,11 @@ export const useCatsStore = defineStore("catsStore", {
       return result;
     },
 
-    // 2. Onda uzimamo samo one koji se trebaju prikazati (Pagination)
     paginatedKittens(state) {
       return this.processedKittens.slice(0, state.visibleCount);
     },
 
-    // 3. Carousel: 4 najmlađa [cite: 5]
     carouselKittens(state) {
-      // Kopiramo array da ne poremetimo glavni poredak
       return [...state.allKittens]
         .filter((k) => !state.adoptedIds.includes(k.id))
         .sort((a, b) => a.months - b.months)
@@ -75,25 +68,22 @@ export const useCatsStore = defineStore("catsStore", {
 
   actions: {
     async fetchKittens() {
-      const res = await fetch("/kittens.json"); // Učitavanje JSON-a [cite: 3]
+      const res = await fetch("/kittens.json");
       this.allKittens = await res.json();
     },
 
     loadMore() {
       this.visibleCount += 20;
-      // Reset sortiranja na default pri 'load more' [cite: 17]
       this.sortBy = "age";
       this.sortDir = "asc";
     },
 
     adoptKitten(id) {
-      this.adoptedIds.push(id); // Mačić nestaje bez refresha [cite: 31]
+      this.adoptedIds.push(id);
     },
 
     setSearch(query) {
       this.searchQuery = query;
-      // NAPOMENA: Ne resetiramo visibleCount ovdje, kako bi se poštovalo pravilo [cite: 28]
-      // da se nakon brisanja pojma vidi isti broj mačića kao prije.
     },
   },
 });

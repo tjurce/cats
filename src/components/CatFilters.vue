@@ -235,7 +235,6 @@ defineEmits([
   }
 }
 
-/* Scrollbar styling */
 .filters::-webkit-scrollbar {
   width: 6px;
 }

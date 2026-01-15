@@ -295,7 +295,6 @@ const {
   }
 }
 
-/* Transition animations for center slide */
 .slide-fade-enter-active {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
